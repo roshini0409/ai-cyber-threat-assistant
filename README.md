@@ -15,6 +15,21 @@ An end-to-end AI-powered cybersecurity assistant that performs semantic threat s
 - React, Vite, Tailwind CSS  
 - Docker + Endee Vector DB  
 
+## 🧠 System Design & Endee Usage
+
+The AI Cyber Threat Assistant follows a **semantic search architecture**:
+
+1. User enters a cybersecurity-related query in the React frontend.
+2. The query is sent to a FastAPI backend service.
+3. The backend converts the text into **vector embeddings** using a Sentence-Transformer model.
+4. These embeddings are searched inside the **Endee Vector Database** running via Docker.
+5. Endee returns the most **semantically similar cyber-threat records**.
+6. Results are displayed in the frontend with similarity scores.
+
+Endee is used as the **core vector storage and retrieval engine**, enabling
+**AI-driven semantic search instead of keyword matching**, which is essential
+for modern RAG and recommendation systems.
+
 ## ⚙️ How to Run
 
 ### 1. Start Endee DB
